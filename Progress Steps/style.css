@@ -1,0 +1,107 @@
+:root{
+  --linefill:blueviolet;
+  --bgcolor: whitesmoke;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+
+.container{
+  text-align: center;
+}
+
+.progress-container{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom:30px;
+  width: 300px;
+  max-width: 100%;
+}
+
+.progress-container::before{
+  content:"";
+  background-color: goldenrod;
+  position: absolute;
+  top: 50%;
+  left:0;
+  height: 4px;
+  width: 100%;
+  z-index:-5;
+  transform:translateY(-50%)
+}
+
+#progress{
+  background-color: blueviolet;
+  position: absolute;
+  top: 50%;
+  left:0;
+  height: 10px;
+  width: 0%;
+  z-index:-1;
+  transition: 0.4s ease;
+  transform:translateY(-50%)
+}
+
+.circle{
+  background-color:whitesmoke;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 3px solid blueviolet;
+  text-align: center;
+  align-content: center;
+  color: blueviolet;
+  font-weight: 600;
+  transition: 0.4s ease;
+}
+
+.circle.active{
+   border-color: orangered;
+}
+
+
+.btn{
+  width: 5rem;
+  height: 2rem;
+  text-align: center;
+  align-items:center;
+  border: 1px solid blueviolet;
+  border-radius:10px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.btn:hover{
+    background-color: blueviolet;
+    transition: background-color 0.2s ease-in 0.3s;
+    cursor: pointer;
+    box-shadow: 5px;
+}
+
+.btn:active{
+  transform: scale(0.9);
+}
+
+.btn:disabled{
+  transition: none;
+  border: 1px solid gray;
+  background-color: slategray;
+  cursor:not-allowed;
+}
