@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+.navtext {
+  font-family:"Poppins",sans-serif;
+  font-weight: 600;
+  margin-left: 1rem;
+  color:white;
+  margin-bottom: 1rem;
+  margin-left:2rem;
+}
+
+ul{
+  list-style-type: none;
+}
+
+h1, h2, h3{
+  font-family: "Bree Serif", serif;
+}
+
+
+body{
+  overflow-x: hidden;
+  color:#222;
+  background-color: #333;
+}
+
+@keyframes appear{
+  from {
+    opacity:0%;
+  }
+  to{
+    opacity: 100%;
+  }
+}
+
+.container{
+  background: rgb(34,193,195);
+  background: linear-gradient(34deg, rgba(34,193,195,1) 0%, rgba(190,120,181,1) 58%, rgba(253,187,45,1) 100%);
+  transform-origin: top left;
+  transition:transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 4rem;
+  z-index: 5;
+}
+
+nav{
+  z-index: -1;
+  position: absolute;
+  bottom: 5vh;
+}
+
+.container.show-nav{
+  transform:rotate(-20deg) ;
+}
+
+
+#close{
+  height: 3rem;
+  width: 3rem;
+  background: black;
+  color:white;
+  font-size:1.5rem;
+  display: none;
+  animation-name: appear;
+  animation-duration: 1s;
+}
+
+#open{
+  height: 3rem;
+  width: 3rem;
+  background: black;
+  color:white;
+  font-size:1.5rem;
+  animation-name: appear;
+  animation-duration: 1s;
+}
+
